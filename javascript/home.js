@@ -95,3 +95,21 @@ document.querySelector('.subscribe-btn').addEventListener('click', () => {
 });
 
 
+
+// scroll reveal.
+
+ScrollReveal({ 
+    //  reset: true,
+    distance:'80px',
+    duration:2000,
+    delay:200,
+
+});
+
+ScrollReveal().reveal('.hero-img, .heading, .impact-heading, .section-title, .team-section, .partners-sectio', { origin:'top'});
+ScrollReveal().reveal('.hero-p, .services-container, .portfolio-box, .contact form, .about-text, .paragraph, .programs-subtext, .update-section, .team-intro, .newsletter', { origin:'bottom'});
+ScrollReveal().reveal('.home-content h1, .about-img, .portfolio-b, .impact-grid, .team-member, .partner-logos ', { origin:'left'});
+ScrollReveal().reveal('.home-content p, .about-content, .btn, .portfolio-bo, .highlight', { origin:'right'});
+
+
+
