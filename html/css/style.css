@@ -156,8 +156,20 @@ header.scrolled .navbar a.active{
 /* hero section */
 
 .hero{
-    background: linear-gradient(rgb(0, 0, 0, .1), #842C63), url('/html/assets/m2mhero2.jpg') no-repeat center / cover;
-    background-size: 100%;
+  /* gradient overlay + background image */
+  background: linear-gradient(
+                rgba(0, 0, 0, 0.1),   /* transparent black */
+                #842C63              /* brand color */
+              ),
+              url("../assets/m2mhero2.jpg");
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  width: 100%;
+  height: 100vh; /* full screen */
+
 }
 .hero.hero-box{
    position:relative;
