@@ -156,7 +156,7 @@ header.scrolled .navbar a.active{
 /* hero section */
 
 .hero{
-    background: linear-gradient(rgb(0, 0, 0, .1), #842C63), url('/html/assets/hero\ m2m.jpg') no-repeat center / cover;
+    background: linear-gradient(rgb(0, 0, 0, .1), #842C63), url('/html/assets/m2mhero2.jpg') no-repeat center / cover;
     background-size: 100%;
 }
 .hero.hero-box{
