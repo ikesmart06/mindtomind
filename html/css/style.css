@@ -260,6 +260,7 @@ header.scrolled #menu-icon span {
 .about-section {
   background-color: #F8F6F9;
   padding: 4rem 2rem;
+  margin-bottom: -3rem;
 }
 
 .about-container {
@@ -388,6 +389,9 @@ header.scrolled #menu-icon span {
   .about-text h2 {
     font-size: 2.5rem;
   }
+  .about-section {  
+  margin-bottom: -4rem;
+}
 
   .paragraph {
     font-size: 1.4rem;
@@ -416,6 +420,10 @@ header.scrolled #menu-icon span {
   .about-text h2 {
     font-size: 2rem;
   }
+   .about-section {  
+  margin-bottom: -30rem;
+}
+
 
   .paragraph {
     font-size: 1.2rem;
@@ -445,7 +453,7 @@ header.scrolled #menu-icon span {
   background-color: #F4F4F4;
   padding: 4rem 2rem;
   text-align: center;
-  margin-top: -10rem;
+  margin-bottom: -25rem;
 }
 
 .impact-wrapper {
@@ -539,7 +547,8 @@ header.scrolled #menu-icon span {
     font-size: 2.2rem;
   }
  .impact-section {
-  margin-top: -24rem;
+  margin-top: -20rem;
+margin-bottom: -3rem;
 }
   .paragraph {
     font-size: 1rem;
