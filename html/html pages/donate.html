@@ -1,38 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Donate</title>
-  <link rel="stylesheet" href="../css/donate.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Donate - Mind to Mind Initiative Africa</title>
+  <link rel="stylesheet" href="../css/donate.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
-  <section class="section">
-    <div class="section-img">
-      <img src="../assets/5.jpg" alt="Donate">
+  <!-- ===== Navbar ===== -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="../assets/m2m.png" alt="Mind to Mind Logo" />
     </div>
-    <div class="form-box">
-      <h2>Donate</h2>
-      <form id="donationForm">
-        <label for="name">Full Name</label>
-        <input type="text" id="name" placeholder="Enter your full name">
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="programs.html">Programs</a></li>
+        <li><a href="get-involved.html">Get Involved</a></li>
+        <li><a href="donate.html" class="active">Donate</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+    </nav>
+  </header>
 
-        <label for="email">Email Address</label>
-        <input type="email" id="email" placeholder="Enter your email">
+  <!-- ===== Hero Section ===== -->
+  <section class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content animate">
+      <h1>Together, We Can Change Lives</h1>
+      <p>Your donation empowers young minds, supports community projects, and drives sustainable change across Africa.</p>
+      <a href="#donation-form" class="btn-primary">Donate Now</a>
+    </div>
 
-        <label for="phone">Phone Number</label>
-        <input type="tel" id="phone" placeholder="Enter your phone number">
-
-        <label for="amount">Donation Amount (₦)</label>
-        <input type="number" id="amount" placeholder="Enter amount">
-
-        <label for="message">Message (Optional)</label>
-        <textarea id="message" rows="3" placeholder="Leave a message..."></textarea>
-
-        <button type="submit">Donate Now</button>
+    <div class="form-container animate" id="donation-form">
+      <h2>Make a Donation</h2>
+      <form action="https://formspree.io/f/xqayeaeq" method="POST">
+        <div class="form-group">
+          <input type="text" name="full_name" placeholder="Full Name" required />
+          <input type="email" name="email" placeholder="Email Address" required />
+        </div>
+        <div class="form-group">
+          <input type="number" name="amount" placeholder="Donation Amount (₦)" required />
+          <select name="donation_type" required>
+            <option value="">Select Donation Type</option>
+            <option value="One-Time">One-Time</option>
+            <option value="Monthly">Monthly</option>
+            <option value="Annual">Annual</option>
+          </select>
+        </div>
+        <textarea name="message" placeholder="Leave a message (optional)" rows="4"></textarea>
+        <button type="submit" class="btn-submit">Submit Donation</button>
       </form>
     </div>
   </section>
-  <script src="donate.js"></script>
+
+  <!-- ===== How Donations Help ===== -->
+  <section class="impact animate">
+    <h2>Your Support Makes a Difference</h2>
+    <div class="impact-grid">
+      <div class="impact-card">
+        <i class="fas fa-graduation-cap"></i>
+        <h3>Educate</h3>
+        <p>Your donations help provide access to education and mentorship programs for youth.</p>
+      </div>
+      <div class="impact-card">
+        <i class="fas fa-leaf"></i>
+        <h3>Empower</h3>
+        <p>We support sustainable initiatives that empower communities to become self-reliant.</p>
+      </div>
+      <div class="impact-card">
+        <i class="fas fa-hand-holding-heart"></i>
+        <h3>Inspire</h3>
+        <p>Every contribution spreads hope and inspires others to be part of positive change.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="footer-content">
+      <p>&copy; 2025 Mind to Mind Initiative Africa. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../js/donate.js"></script>
 </body>
 </html>

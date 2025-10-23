@@ -14,15 +14,13 @@ window.addEventListener("scroll", () => {
   header.classList.toggle("scrolled", window.scrollY > 50);
 });
 
-// Impact Section
-
-// Counter animation (restarts every time you scroll)
+// Impact Section Counter (runs only once on load)
 const counters = document.querySelectorAll(".num");
 
 const animateCounter = (el, end) => {
   let start = 0;
-  let duration = 2000; // total animation time (ms)
-  let increment = Math.ceil(end / (duration / 30)); // speed
+  let duration = 2000;
+  let increment = Math.ceil(end / (duration / 30));
 
   let counter = setInterval(() => {
     start += increment;
@@ -35,11 +33,12 @@ const animateCounter = (el, end) => {
   }, 30);
 };
 
-window.addEventListener("scroll", () => {
+window.addEventListener("load", () => {
   counters.forEach((num) => {
     animateCounter(num, parseInt(num.dataset.num));
   });
 });
+
 
 // Program
 

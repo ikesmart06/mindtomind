@@ -61,15 +61,15 @@ header.scrolled .navbar a { color: #000; }
 header.scrolled .navbar a.active { color: var(--primary-bg); }
 
 /* Buttons */
-.btn {
+ .btn {
   display: inline-block;
-  background-color: var(--primary-bg);
+  background-color:var(--accent);
   color: #fff;
-  padding: 1.2rem 2.8rem;
+  padding: 8px 18px;
   border-radius: 4rem;
   font-size: 1.6rem;
   transition: 0.3s ease;
-}
+} 
 .btn:hover { background: var(--accent); color: #000; }
 .btn2 { display: flex; gap: 1rem; }
 
@@ -166,7 +166,7 @@ header.scrolled #menu-icon span {
 .hero-logo { width: 120px; margin-bottom: 1.5rem; }
 .hero-content h2 { font-size: 4.6rem; margin-bottom: 1rem; }
 .hero-content p { font-size: 1.6rem; margin-bottom: 2rem; }
-.btn {
+.bt {
   display: inline-block;
   background: var(--primary-bg);
   color: #fff;
@@ -447,127 +447,100 @@ header.scrolled #menu-icon span {
   }
 }
  
-/* Impact Section */
-
+/* Redesigned Impact Section */
 .impact-section {
   background-color: #F4F4F4;
-  padding: 4rem 2rem;
+  padding: 5rem 2rem;
   text-align: center;
-  margin-bottom: -25rem;
-}
-
-.impact-wrapper {
-  max-width: 1200px;
-  margin: 0 auto;
-  top: 0;
-  transition: transform 0.3s ease;
 }
 
 .impact-heading {
-  color: #842C63; /* Plum Purple */
+  color: #842C63;
   font-size: 3rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .impact-heading span {
-  color: #E3D37D; /* Accent */
-}
-
-.paragraph {
-  max-width: 800px;
-  margin: 0 auto 3rem auto;
-  font-size: 1.2rem;
-  line-height: 1.6;
-  color: #2B2B2B;
+  color: #E3D37D;
 }
 
 .impact-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
+  margin-top: 3rem;
 }
 
 .impact-card {
   background: #FFFFFF;
   border-radius: 12px;
-  padding: 2rem 1rem;
+  padding: 2rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+.impact-counter {
+  font-size:2.5rem;
+  font-weight: bold;
+  color: #842C63;
+  margin-top: 1rem;
+
+  display: flex;             /* ✅ force horizontal layout */
+  align-items: center;       /* ✅ align text nicely */
+  justify-content: center;   /* centers horizontally in the card */
+  gap: 0.8rem;               /* small space between Over, number, + */
+}
+
+.impact-counter strong,
+.impact-counter .num {
+  font-weight: bold;         /* ✅ makes Over and + bold along with number */
+}
+
 
 .impact-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 8px 20px rgba(132, 44, 99, 0.2); /* Plum glow */
+  box-shadow: 0 8px 20px rgba(132, 44, 99, 0.2);
 }
 
-.impact-icon {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  background-color: #E3D37D; /* Mustard Accent */
-  width: 70px;
-  height: 70px;
-  line-height: 70px;
-  border-radius: 50%;
-  display: inline-block;
-  color: #2B2B2B;
-}
-
-.numi,
-.num {
-  font-size: 2.5rem;
-  color: #842C63;
-  font-weight: bold;
-}
-
-.impact-label {
-  color: #2B2B2B;
-  margin: 1rem 0;
-  font-size: 1rem;
-}
-
-.btn {
-  display: inline-block;
-  padding: 0.6rem 1.2rem;
-  background-color: #842C63;
-  color: #fff;
+.impact-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
   border-radius: 8px;
-  text-decoration: none;
-  font-size: 0.9rem;
-  transition: background 0.3s ease;
+  margin-bottom: 1rem;
 }
 
-.btn:hover {
-  background-color: #6a234f;
-  cursor: pointer;
+.impact-card h3 {
+  font-size: 1.6rem;
+  color: #842C63;
+  margin: 1rem 0;
 }
 
-/* RESPONSIVENESS */
-@media (max-width: 768px) {
-  .impact-heading {
-    font-size: 2.2rem;
+.impact-card p {
+  font-size: 1.2rem;
+  color: #444;
+  margin-bottom: 1.2rem;
+}
+
+.num {
+  display: block;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #842C63;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .impact-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
- .impact-section {
-  margin-top: -20rem;
-margin-bottom: -3rem;
 }
-  .paragraph {
-    font-size: 1rem;
-    padding: 0 1rem;
-  }
 
+@media (max-width: 600px) {
   .impact-grid {
     grid-template-columns: 1fr;
   }
+}
 
-  .impact-card {
-    padding: 1.5rem;
-  }
-}
-@media (min-width:769px){
-  .impact-section {
-  margin-top: -5rem;
-}
-}
 
 /* Program */
 
@@ -575,6 +548,8 @@ margin-bottom: -3rem;
 .programs-section {
   background-color: #fff;
   padding: 4rem 2rem;
+  margin-bottom: -9rem;
+ 
 }
 
 .section-title {
@@ -696,6 +671,7 @@ margin-bottom: -3rem;
   display: flex;
   flex-direction: column;
   gap: 3rem;
+  
 }
 
 .update-container {
@@ -801,12 +777,15 @@ margin-bottom: -3rem;
   padding: 60px 20px;
   background-color: #f8f8f8;
   text-align: center;
+  margin-bottom: -3rem;
 }
 
 .team-title {
   font-size: 3rem;
   color: #842C63;
   margin-bottom: 1rem;
+  margin-top: -5rem;
+  
 }
 
 .team-intro {

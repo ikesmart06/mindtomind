@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Become a Member - Mind to Mind Initiative Africa</title>
+  <link rel="stylesheet" href="../css/become-member.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <!-- ===== Navbar ===== -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="../assets/m2m.png" alt="Mind to Mind Logo" />
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="programs.html">Programs</a></li>
+        <li><a href="get-involved.html" class="active">Get Involved</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+    </nav>
+  </header>
+
+  <!-- ===== Hero Section ===== -->
+  <section class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content animate">
+      <h1>Become a Member of Mind to Mind</h1>
+      <p>
+        Join a growing movement transforming lives through education, empowerment, and community impact.
+        Together, we can inspire lasting change one mind at a time.
+      </p>
+      <a href="#membership-form" class="btn-primary">Join Now</a>
+    </div>
+
+    <div class="form-container animate" id="membership-form">
+      <h2>Membership Form</h2>
+      <form action="https://formspree.io/f/xqayeaeq" method="POST">
+        <div class="form-group">
+          <input type="text" name="first_name" placeholder="First Name" required />
+          <input type="text" name="last_name" placeholder="Last Name" required />
+        </div>
+        <div class="form-group">
+          <input type="email" name="email" placeholder="Email Address" required />
+          <input type="tel" name="phone" placeholder="Phone Number" required />
+        </div>
+        <textarea name="message" placeholder="Tell us why you want to join..." rows="4"></textarea>
+        <button type="submit" class="btn-submit">Submit</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="footer-content">
+      <p>&copy; 2025 Mind to Mind Initiative Africa. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../js/become-member.js"></script>
+</body>
+</html>
